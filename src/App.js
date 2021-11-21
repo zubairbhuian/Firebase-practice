@@ -42,8 +42,14 @@ export default function App(){
         </Typography>
         <div style={{display:'flex'}}>
         <Avatar style={{marginRight:'20px'}} alt="Remy Sharp" src={user.photo} />
-          <Button  variant="contained" color="primary">Sign out</Button>
-          <Button onClick={handelSignIn} variant="contained" color="primary">Sign in</Button>
+        {
+          isSignedIn ?
+            <Button  variant="contained" color="primary">Sign out</Button> :
+            <Button onClick={handelSignIn} variant="contained" color="primary">Sign in</Button>
+
+
+        }
+
         </div>
       </Toolbar>
     </AppBar>
